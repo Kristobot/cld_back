@@ -12,6 +12,7 @@ defmodule AppWeb.Schema.Person do
     field :date_of_birth, :date
     field :address, :string
     field :user_id, :id
+    field :specialty, :string
 
     field :user, :user
 
@@ -25,6 +26,7 @@ defmodule AppWeb.Schema.Person do
     field :phone_number, non_null(:string)
     field :date_of_birth, non_null(:date)
     field :address, non_null(:string)
+    field :specialty, non_null(:string)
   end
 
   object :person_mutations do

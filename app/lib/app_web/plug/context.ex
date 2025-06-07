@@ -15,6 +15,8 @@ defmodule AppWeb.Plug.Context do
   end
 
   defp get_user_from_header(["Bearer " <> token]) do
+
+    dbg(token)
     with {:ok, claims} <- Token.verify_token(token),
       {:ok, user} <- Accounts.get_user_by_id(claims["id"])
     do

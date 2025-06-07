@@ -8,6 +8,7 @@ defmodule App.Accounts.Person do
     field :phone_number, :string
     field :date_of_birth, :date
     field :address, :string
+    field :specialty, Ecto.Enum, values: [none: 0, ortodoncia: 1, endondocia: 2, periodoncia: 3, general: 4]
 
     belongs_to :user, App.Accounts.User
 
@@ -16,8 +17,8 @@ defmodule App.Accounts.Person do
 
   def changeset(person, attrs) do
     person
-    |> cast(attrs, [:first_name, :last_name, :phone_number, :date_of_birth, :address, :user_id])
-    |> validate_required([:first_name, :last_name, :phone_number, :date_of_birth, :address, :user_id])
+    |> cast(attrs, [:first_name, :last_name, :phone_number, :date_of_birth, :address, :user_id, :specialty])
+    |> validate_required([:first_name, :last_name, :phone_number, :date_of_birth, :address, :user_id, :specialty])
     |> foreign_key_constraint(:user_id)
   end
 end

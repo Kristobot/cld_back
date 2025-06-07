@@ -8,6 +8,7 @@ defmodule App.Repo.Migrations.CreatePeople do
       add :phone_number, :string
       add :date_of_birth, :date
       add :address, :string
+      add :specialty, :integer
       add :user_id, references(:users, on_delete: :delete_all), null: false
 
       timestamps()
