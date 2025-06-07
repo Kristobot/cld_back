@@ -49,7 +49,8 @@ defmodule App.MixProject do
       {:absinthe, "~> 1.7"},
       {:absinthe_plug, "~> 1.5"},
       {:absinthe_phoenix, "~> 2.0.0"},
-      {:joken, "~> 2.6"}
+      {:joken, "~> 2.6"},
+      {:cors_plug, "~> 3.0"}
     ]
   end
 

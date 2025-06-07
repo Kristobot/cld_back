@@ -36,5 +36,13 @@ defmodule AppWeb.Endpoint do
   plug Plug.MethodOverride
   plug Plug.Head
   plug Plug.Session, @session_options
+
+  plug CORSPlug,
+    origins: ["*"],
+    methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
+    headers: ["Authorization", "Content-Type", "Accept"],
+    max_age: 86400,
+    credentials: true
+
   plug AppWeb.Router
 end
