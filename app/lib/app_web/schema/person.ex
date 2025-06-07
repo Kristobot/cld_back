@@ -12,7 +12,7 @@ defmodule AppWeb.Schema.Person do
     field :date_of_birth, :date
     field :address, :string
     field :user_id, :id
-    field :specialty, :string
+    field :specialty, :integer
 
     field :user, :user
 

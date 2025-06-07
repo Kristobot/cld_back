@@ -47,4 +47,32 @@ defmodule App.Accounts do
     |> Person.changeset(attrs)
     |> Repo.insert()
   end
+
+  def list_users(args) do
+    args
+    |> user_query()
+    |> preload(:person)
+    |> Repo.all()
+    |> case do
+      [] -> {:ok, []}
+      users -> {:ok, users}
+    end
+  end
+
+  def user_query(args) do
+    Enum.reduce(args, User, fn
+      {:filter, filter}, query -> query |> user_filter(filter)
+    end)
+  end
+
+  defp user_filter(query, filter) do
+    Enum.reduce(filter, query, fn
+      {:id, id}, query ->
+        from(q in query, where: q.id == ^id)
+      {:email, email}, query ->
+        from(q in query, where: q.email == ^email)
+      {:role, role}, query ->
+        from(q in query, where: q.role == ^role)
+    end)
+  end
 end

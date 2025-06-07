@@ -8,7 +8,7 @@ defmodule App.Accounts.Person do
     field :phone_number, :string
     field :date_of_birth, :date
     field :address, :string
-    field :specialty, Ecto.Enum, values: [none: 0, ortodoncia: 1, endondocia: 2, periodoncia: 3, general: 4]
+    field :specialty, :integer
 
     belongs_to :user, App.Accounts.User
 

@@ -32,4 +32,11 @@ defmodule App.Resolvers.User do
       {:error, changeset} -> {:error, changeset}
     end
   end
+
+  def list_users(_parents, filter, _resolution) do
+    case Accounts.list_users(filter) do
+      {:ok, users} -> {:ok, users}
+      {:error, _} -> {:error, "Invalid filter"}
+    end
+  end
 end

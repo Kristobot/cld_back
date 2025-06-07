@@ -6,7 +6,7 @@ defmodule App.Accounts.User do
   schema "users" do
     field :email, :string
     field :password, :string
-    field :role, Ecto.Enum, values: [admin: 0, doctor: 1, receptionist: 2, nurse: 3]
+    field :role, :integer
 
     has_one :person, App.Accounts.Person
 
