@@ -7,6 +7,7 @@ defmodule AppWeb.Router do
 
   pipeline :graphql do
     plug :accepts, ["json"]
+    plug AppWeb.Plug.Context
   end
 
   # Endpoint principal GraphQL

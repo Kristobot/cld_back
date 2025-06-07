@@ -5,7 +5,11 @@ defmodule AppWeb.Schema.User do
     field :id, :id
     field :email, :string
     field :role, :string
+
     field :person, :person
+
+    field :inserted_at, :string
+    field :updated_at, :string
   end
 
   object :token_response do

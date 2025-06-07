@@ -10,9 +10,8 @@ defmodule AppWeb.Token do
   def generate_token(user) do
 
     extra_claims = %{
-      "role" => user.role,
-      "email" => user.email,
-      "id" => user.id
+      role: user.role,
+      id: user.id
     }
 
     __MODULE__

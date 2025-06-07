@@ -16,7 +16,8 @@ defmodule App.Accounts.Person do
 
   def changeset(person, attrs) do
     person
-    |> cast(attrs, [:first_name, :last_name, :phone_number, :date_of_birth, :address])
-    |> validate_required([:first_name, :last_name, :phone_number, :date_of_birth, :address])
+    |> cast(attrs, [:first_name, :last_name, :phone_number, :date_of_birth, :address, :user_id])
+    |> validate_required([:first_name, :last_name, :phone_number, :date_of_birth, :address, :user_id])
+    |> foreign_key_constraint(:user_id)
   end
 end
