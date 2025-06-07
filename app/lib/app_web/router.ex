@@ -9,21 +9,19 @@ defmodule AppWeb.Router do
     plug :accepts, ["json"]
   end
 
-  # Desarrollo: GraphiQL
-  if Mix.env() == :dev do
-    scope "/" do
-      pipe_through :graphql
-
-      forward "/graphiql", Absinthe.Plug.GraphiQL,
-        schema: AppWeb.Schema # Solo si usas subscriptions
-    end
-  end
-
   # Endpoint principal GraphQL
   scope "/api" do
     pipe_through :graphql
 
+    if Mix.env() == :dev do
+      forward "/graphiql", Absinthe.Plug.GraphiQL,
+        schema: AppWeb.Schema,
+        interface: :simple
+    end
+
     forward "/", Absinthe.Plug,
       schema: AppWeb.Schema
+
   end
+
 end
