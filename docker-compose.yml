@@ -1,0 +1,40 @@
+services:
+  webserver:
+    build:
+      context: ./nginx
+      args:
+        - SSL_STATUS=$SSL_STATUS
+    restart: unless-stopped
+    env_file: .env
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - /etc/letsencrypt:/etc/letsencrypt
+      - ./static:/home
+    depends_on:
+      - app
+
+  app:
+    build: .
+    restart: unless-stopped
+    env_file: .env
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./app:/app/
+      - ./bin:/app/bin/
+    depends_on:
+      - db
+
+  db:
+    image: mysql:8.0
+    restart: unless-stopped
+    env_file: .env
+    ports:
+      - 3306:3306
+    volumes:
+      - db-data:/var/lib/mysql
+
+volumes:
+  db-data:
