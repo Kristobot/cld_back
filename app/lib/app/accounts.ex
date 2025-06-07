@@ -13,6 +13,12 @@ defmodule App.Accounts do
     |> Repo.insert()
   end
 
+  def create_user_with_person(attrs \\ %{}) do
+    %User{}
+    |> User.register_with_person(attrs)
+    |> Repo.insert()
+  end
+
   def get_user_by_email(email) do
     case Repo.get_by(User, email: email) do
       nil -> {:error, :not_found}
@@ -24,6 +30,15 @@ defmodule App.Accounts do
     case Repo.get(User, id) do
       nil -> {:error, :not_found}
       user -> {:ok, user}
+    end
+  end
+
+  def get_user_by_id(id, :preload) do
+    case Repo.get(User, id) do
+      nil -> {:error, :not_found}
+      user ->
+        user = Repo.preload(user, :person)
+        {:ok, user}
     end
   end
 

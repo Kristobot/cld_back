@@ -18,7 +18,7 @@ defmodule AppWeb.Plug.Context do
 
     dbg(token)
     with {:ok, claims} <- Token.verify_token(token),
-      {:ok, user} <- Accounts.get_user_by_id(claims["id"])
+      {:ok, user} <- Accounts.get_user_by_id(claims["id"], :preload)
     do
       %{current_user: user}
     else

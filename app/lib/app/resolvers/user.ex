@@ -21,4 +21,15 @@ defmodule App.Resolvers.User do
       {:error, :invalid_token} -> {:error, "Invalid token"}
     end
   end
+
+  def me(_parents, _args, %{context: %{current_user: user}}) do
+    {:ok, user}
+  end
+
+  def register_with_person(_parents, %{input: input}, _resolution) do
+    case Accounts.create_user_with_person(input) do
+      {:ok, user} -> {:ok, user}
+      {:error, changeset} -> {:error, changeset}
+    end
+  end
 end
