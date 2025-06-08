@@ -8,6 +8,8 @@ defmodule App.Repo.Migrations.CreateUser do
       add :role, :integer
       timestamps()
     end
+
+    create unique_index(:users, [:email])
   end
 
   def down do

@@ -5,14 +5,17 @@ defmodule AppWeb.Schema do
 
   import_types(__MODULE__.User)
   import_types(__MODULE__.Person)
+  import_types(__MODULE__.ContactMessage)
 
   query do
     import_fields(:user_queries)
+    import_fields(:contact_message_queries)
   end
 
   mutation do
     import_fields(:user_mutations)
     import_fields(:person_mutations)
+    import_fields(:contact_message_mutations)
   end
 
   # Aplica el middleware a todas las mutations

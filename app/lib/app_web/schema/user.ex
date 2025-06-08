@@ -20,13 +20,13 @@ defmodule AppWeb.Schema.User do
   input_object :user_input do
     field :email, non_null(:string)
     field :password, non_null(:string)
-    field :role, non_null(:string)
+    field :role, non_null(:integer)
   end
 
   input_object :user_with_person_input do
     field :email, non_null(:string)
     field :password, non_null(:string)
-    field :role, non_null(:string)
+    field :role, non_null(:integer)
     field :person, non_null(:person_input)
   end
 
