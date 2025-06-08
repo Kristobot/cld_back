@@ -40,7 +40,6 @@ defmodule AppWeb.Schema.ContactMessage do
   object :contact_message_mutations do
     field :create_contact_message, :contact_message do
       arg :input, non_null(:contact_message_input)
-      middleware Middleware.Authenticate
       resolve &App.Resolvers.ContactMessage.create_contact_message/3
     end
   end
