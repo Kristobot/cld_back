@@ -1,13 +1,13 @@
 # Redirección HTTP → HTTPS
 server {
     listen 80;
-    server_name localhost;
-    return 301 https://localhost$request_uri;
+    server_name 3.88.145.129;
+    return 301 https://3.88.145.129$request_uri;
 }
 
 server {
     listen 443 ssl;
-    server_name localhost;
+    server_name 3.88.145.129;
 
     # Usar certificados autogenerados
     ssl_certificate /etc/nginx/ssl/server.crt;
@@ -29,7 +29,7 @@ server {
     proxy_http_version 1.1;
     proxy_set_header Upgrade $http_upgrade;
     proxy_set_header Connection $connection_upgrade;
-    proxy_set_header Host localhost;
+    proxy_set_header Host 3.88.145.129;
     proxy_set_header X-Real-IP $remote_addr;
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     proxy_set_header X-Forwarded-Proto $scheme;
