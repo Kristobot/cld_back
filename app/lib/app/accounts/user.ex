@@ -7,6 +7,7 @@ defmodule App.Accounts.User do
     field :email, :string
     field :password, :string
     field :role, :integer
+    field :status, :integer, default: 1
 
     has_one :person, App.Accounts.Person
 

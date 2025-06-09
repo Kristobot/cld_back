@@ -6,6 +6,7 @@ defmodule App.Repo.Migrations.CreateUser do
       add :email, :string
       add :password, :string
       add :role, :integer
+      add :status, :integer, default: 1
       timestamps()
     end
 
