@@ -37,11 +37,29 @@ defmodule AppWeb.Schema.Patient do
     field :status, non_null(:integer)
   end
 
+  input_object :patient_filter do
+    field :id, :id
+    field :email, :string
+    field :status, :integer
+    field :first_name, :string
+    field :last_name, :string
+    field :status, :integer
+    field :gender, :integer
+  end
+
   object :patient_mutations do
     field :create_patient, :patient do
       arg :input, non_null(:patient_input)
       middleware Middleware.Authenticate
       resolve &App.Resolvers.Patient.create_patient/3
+    end
+  end
+
+  object :patient_queries do
+    field :list_patients, list_of(:patient) do
+      arg :filter, non_null(:patient_filter)
+      middleware Middleware.Authenticate
+      resolve &App.Resolvers.Patient.list_patients/3
     end
   end
 end

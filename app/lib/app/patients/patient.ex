@@ -15,7 +15,7 @@ defmodule App.Patients.Patient do
     field :occupation, :string
     field :emergency_contact, :string
     field :emergency_phone, :string
-    field :status, :integer
+    field :status, :integer, default: 1
 
     timestamps()
   end

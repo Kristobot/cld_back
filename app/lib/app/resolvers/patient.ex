@@ -9,4 +9,11 @@ defmodule App.Resolvers.Patient do
     end
   end
 
+  def list_patients(_parents, args, _resolution) do
+    case Patients.list_patients(args) do
+      {:ok, patients} -> {:ok, patients}
+      {:error, changeset} -> {:error, changeset}
+    end
+  end
+
 end
