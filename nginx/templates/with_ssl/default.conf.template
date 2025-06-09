@@ -38,19 +38,19 @@ server {
 
     # Locations
     location /api {
-        proxy_pass $API_URL/api;
+        proxy_pass http://app:4000/api;
     }
 
     location /rest {
-        proxy_pass $API_URL;
+        proxy_pass http://app:4000;
     }
 
     location / {
-        proxy_pass $API_URL;
+        proxy_pass http://app:4000;
     }
 
     location /websocket {
-        proxy_pass $API_URL;
+        proxy_pass http://app:4000;
         proxy_http_version 1.1;
         proxy_set_header Upgrade $http_upgrade;
         proxy_set_header Connection "upgrade";
