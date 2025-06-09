@@ -22,8 +22,8 @@ defmodule App.Patients.Patient do
 
   def changeset(patient, attrs) do
     patient
-    |> cast(attrs, [:first_name, :last_name, :birth_date, :gender, :phone_number, :email, :address, :city, :postal_code, :occupation, :emergency_contact, :emergency_phone, :registration_date, :status])
-    |> validate_required([:first_name, :last_name, :birth_date, :gender, :phone_number, :email, :address, :city, :postal_code, :occupation, :emergency_contact, :emergency_phone, :registration_date, :status])
+    |> cast(attrs, [:first_name, :last_name, :birth_date, :gender, :phone_number, :email, :address, :city, :postal_code, :occupation, :emergency_contact, :emergency_phone, :status])
+    |> validate_required([:first_name, :last_name, :birth_date, :gender, :phone_number, :email, :address, :city, :postal_code, :occupation, :emergency_contact, :emergency_phone,:status])
     |> validate_format(:email, ~r/^[^\s]+@[^\s]+$/)
     |> unique_constraint(:email, message: "Email already taken")
   end
