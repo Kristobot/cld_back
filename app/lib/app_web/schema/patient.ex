@@ -34,7 +34,6 @@ defmodule AppWeb.Schema.Patient do
     field :occupation, non_null(:string)
     field :emergency_contact, non_null(:string)
     field :emergency_phone, non_null(:string)
-    field :status, non_null(:integer)
   end
 
   input_object :patient_filter do

@@ -16,7 +16,7 @@ defmodule App.Repo.Migrations.CreatePatient do
       add :emergency_contact, :string
       add :emergency_phone, :string
       add :registration_date, :date
-      add :status, :integer
+      add :status, :integer, default: 1
       timestamps()
     end
 
