@@ -10,7 +10,7 @@
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
 
-user = [
+user =
   %{
     email: "test@gmail.com",
     password: "test456123",
@@ -24,6 +24,5 @@ user = [
       specialty: 0
     }
   }
-]
 
 App.Accounts.create_user_with_person(user)
