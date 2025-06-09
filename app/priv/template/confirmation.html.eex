@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmación - Clínica Dental Lazo y Benavente</title>
+    <!--[if mso]>
+    <noscript>
+        <xml>
+            <o:OfficeDocumentSettings>
+                <o:PixelsPerInch>96</o:PixelsPerInch>
+            </o:OfficeDocumentSettings>
+        </xml>
+    </noscript>
+    <![endif]-->
+</head>
+<body style="margin: 0; padding: 0; font-family: Arial, sans-serif; background-color: #f8fafc; line-height: 1.6;">
+    <!-- Main Container -->
+    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color: #f8fafc;">
+        <tr>
+            <td align="center" style="padding: 20px 0;">
+                <!-- Email Content Container -->
+                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" style="max-width: 600px; background-color: #ffffff; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+
+                    <!-- Header -->
+                    <tr>
+                        <td style="background: linear-gradient(135deg, #0ea5e9, #10b981); padding: 30px 40px; text-align: center; border-radius: 8px 8px 0 0;">
+                            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                <tr>
+                                    <td align="center">
+                                        <!-- Logo/Icon -->
+                                        <div style="width: 60px; height: 60px; background-color: rgba(255, 255, 255, 0.2); border-radius: 50%; margin: 0 auto 15px; display: flex; align-items: center; justify-content: center;">
+                                            <span style="color: white; font-size: 24px; font-weight: bold;">🦷</span>
+                                        </div>
+                                        <h1 style="color: white; font-size: 24px; font-weight: bold; margin: 0 0 5px 0;">Clínica Dental</h1>
+                                        <p style="color: rgba(255, 255, 255, 0.9); font-size: 16px; margin: 0; font-weight: 500;">Lazo y Benavente</p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- Success Message -->
+                    <tr>
+                        <td style="padding: 40px 40px 30px 40px; text-align: center;">
+                            <!-- Success Icon -->
+                            <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #34d399, #059669); border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center;">
+                                <span style="color: white; font-size: 32px;">✓</span>
+                            </div>
+
+                            <h2 style="color: #1e293b; font-size: 28px; font-weight: bold; margin: 0 0 15px 0;">¡Formulario enviado correctamente!</h2>
+                            <p style="color: #64748b; font-size: 18px; margin: 0; line-height: 1.5;">
+                                Gracias por contactar con la <strong style="color: #0ea5e9;">Clínica Dental Lazo y Benavente</strong>.<br>
+                                Hemos recibido tu solicitud y nos pondremos en contacto contigo a la brevedad.
+                            </p>
+                        </td>
+                    </tr>
+
+                    <!-- Next Steps Section -->
+                    <tr>
+                        <td style="padding: 0 40px 30px 40px;">
+                            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color: #f8fafc; border-radius: 8px; padding: 25px;">
+                                <tr>
+                                    <td>
+                                        <h3 style="color: #1e293b; font-size: 20px; font-weight: bold; margin: 0 0 20px 0; display: flex; align-items: center;">
+                                            <span style="background: linear-gradient(135deg, #60a5fa, #3b82f6); color: white; width: 30px; height: 30px; border-radius: 6px; display: inline-flex; align-items: center; justify-content: center; margin-right: 10px; font-size: 16px;">📅</span>
+                                            Próximos pasos
+                                        </h3>
+
+                                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                            <tr>
+                                                <td style="padding: 8px 0; vertical-align: top; width: 20px;">
+                                                    <div style="width: 8px; height: 8px; background-color: #10b981; border-radius: 50%; margin-top: 6px;"></div>
+                                                </td>
+                                                <td style="padding: 8px 0 8px 15px;">
+                                                    <p style="margin: 0; color: #374151; font-size: 15px;"><strong>En las próximas 24 horas:</strong> Nuestro equipo revisará tu consulta y te contactará para confirmar tu cita.</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding: 8px 0; vertical-align: top; width: 20px;">
+                                                    <div style="width: 8px; height: 8px; background-color: #10b981; border-radius: 50%; margin-top: 6px;"></div>
+                                                </td>
+                                                <td style="padding: 8px 0 8px 15px;">
+                                                    <p style="margin: 0; color: #374151; font-size: 15px;"><strong>Preparación:</strong> Te enviaremos información detallada sobre tu cita y cualquier preparación necesaria.</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding: 8px 0; vertical-align: top; width: 20px;">
+                                                    <div style="width: 8px; height: 8px; background-color: #10b981; border-radius: 50%; margin-top: 6px;"></div>
+                                                </td>
+                                                <td style="padding: 8px 0 8px 15px;">
+                                                    <p style="margin: 0; color: #374151; font-size: 15px;"><strong>Recordatorio:</strong> Recibirás un recordatorio 24 horas antes de tu cita programada.</p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- Contact Information -->
+                    <tr>
+                        <td style="padding: 0 40px 30px 40px;">
+                            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color: #f0f9ff; border-radius: 8px; padding: 25px;">
+                                <tr>
+                                    <td>
+                                        <h3 style="color: #1e293b; font-size: 20px; font-weight: bold; margin: 0 0 20px 0; display: flex; align-items: center;">
+                                            <span style="background: linear-gradient(135deg, #34d399, #10b981); color: white; width: 30px; height: 30px; border-radius: 6px; display: inline-flex; align-items: center; justify-content: center; margin-right: 10px; font-size: 16px;">📞</span>
+                                            Información de contacto
+                                        </h3>
+
+                                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                            <tr>
+                                                <td style="padding: 8px 0;">
+                                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color: white; border-radius: 6px; padding: 12px;">
+                                                        <tr>
+                                                            <td style="width: 30px; vertical-align: middle;">
+                                                                <span style="color: #0ea5e9; font-size: 16px;">📞</span>
+                                                            </td>
+                                                            <td style="vertical-align: middle;">
+                                                                <p style="margin: 0; color: #374151; font-size: 15px;"><strong>Teléfono:</strong> +51 <%= phone_number %></p>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding: 8px 0;">
+                                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color: white; border-radius: 6px; padding: 12px;">
+                                                        <tr>
+                                                            <td style="width: 30px; vertical-align: middle;">
+                                                                <span style="color: #0ea5e9; font-size: 16px;">✉️</span>
+                                                            </td>
+                                                            <td style="vertical-align: middle;">
+                                                                <p style="margin: 0; color: #374151; font-size: 15px;"><strong>Email:</strong> <%= email %></p>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding: 8px 0;">
+                                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color: white; border-radius: 6px; padding: 12px;">
+                                                        <tr>
+                                                            <td style="width: 30px; vertical-align: middle;">
+                                                                <span style="color: #0ea5e9; font-size: 16px;">🦷</span>
+                                                            </td>
+                                                            <td style="vertical-align: middle;">
+                                                                <p style="margin: 0; color: #374151; font-size: 15px;"><strong>Nombre:</strong> <%= name %></p>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding: 8px 0;">
+                                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color: white; border-radius: 6px; padding: 12px;">
+                                                        <tr>
+                                                            <td style="width: 30px; vertical-align: middle;">
+                                                                <span style="color: #0ea5e9; font-size: 16px;">🕒</span>
+                                                            </td>
+                                                            <td style="vertical-align: middle;">
+                                                                <p style="margin: 0; color: #374151; font-size: 15px;"><strong>Horario:</strong> Lun-Vie 9:00-18:00</p>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- CTA Button -->
+                    <tr>
+                        <td style="padding: 0 40px 40px 40px; text-align: center;">
+                            <table role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin: 0 auto;">
+                                <tr>
+                                    <td style="background: linear-gradient(135deg, #0ea5e9, #10b981); border-radius: 8px; padding: 15px 30px;">
+                                        <a href="tel:+34XXXXXXXXX" style="color: white; text-decoration: none; font-weight: bold; font-size: 16px; display: block;">
+                                            Contactar ahora
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- Footer -->
+                    <tr>
+                        <td style="background-color: #f8fafc; padding: 30px 40px; text-align: center; border-radius: 0 0 8px 8px; border-top: 1px solid #e2e8f0;">
+                            <p style="color: #64748b; font-size: 14px; margin: 0 0 10px 0;">
+                                Si tienes alguna urgencia dental, no dudes en contactarnos inmediatamente.
+                            </p>
+                            <p style="color: #94a3b8; font-size: 12px; margin: 0;">
+                                © <%= year %> Clínica Dental Lazo y Benavente. Todos los derechos reservados.
+                            </p>
+                        </td>
+                    </tr>
+
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,66 @@
+# Redirección HTTP → HTTPS
+server {
+    listen 80;
+    server_name localhost;
+    return 301 https://localhost$request_uri;
+}
+
+server {
+    listen 443 ssl;
+    server_name localhost;
+
+    # Usar certificados autogenerados
+    ssl_certificate /etc/nginx/ssl/server.crt;
+    ssl_certificate_key /etc/nginx/ssl/server.key;
+    
+    # Optimizaciones SSL
+    ssl_protocols TLSv1.2 TLSv1.3;
+    ssl_ciphers 'ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256';
+    ssl_prefer_server_ciphers on;
+    ssl_session_cache shared:SSL:10m;
+    ssl_session_timeout 10m;
+    
+    # Cabeceras de seguridad
+    add_header Strict-Transport-Security "max-age=63072000" always;
+    add_header X-Content-Type-Options nosniff;
+    add_header X-Frame-Options "SAMEORIGIN";
+
+    # Configuración común
+    proxy_http_version 1.1;
+    proxy_set_header Upgrade $http_upgrade;
+    proxy_set_header Connection $connection_upgrade;
+    proxy_set_header Host localhost;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header X-Forwarded-Proto $scheme;
+
+    resolver 8.8.8.8;
+
+    # Locations
+    location /api {
+        proxy_pass $API_URL/api;
+    }
+
+    location /rest {
+        proxy_pass $API_URL;
+    }
+
+    location / {
+        proxy_pass $API_URL;
+    }
+
+    location /websocket {
+        proxy_pass $API_URL;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+        proxy_read_timeout 86400s;
+        proxy_send_timeout 86400s;
+    }
+}
+
+# Mapa para conexiones WebSocket
+map $http_upgrade $connection_upgrade {
+    default upgrade;
+    '' close;
+}
