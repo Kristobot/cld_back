@@ -19,6 +19,8 @@ defmodule App.Repo.Migrations.CreatePatient do
       add :status, :integer
       timestamps()
     end
+
+    create unique_index(:patients, [:email])
   end
 
   def down do
