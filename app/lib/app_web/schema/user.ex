@@ -34,6 +34,7 @@ defmodule AppWeb.Schema.User do
     field :id, :id
     field :email, :string
     field :role, :integer
+    field :status, :integer
   end
 
   object :user_mutations do
