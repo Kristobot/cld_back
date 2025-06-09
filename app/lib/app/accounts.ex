@@ -73,6 +73,8 @@ defmodule App.Accounts do
         from(q in query, where: q.email == ^email)
       {:role, role}, query ->
         from(q in query, where: q.role == ^role)
+      {:status, status}, query ->
+        from(q in query, where: q.status == ^status)
     end)
   end
 end
