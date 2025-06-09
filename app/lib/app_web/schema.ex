@@ -11,6 +11,7 @@ defmodule AppWeb.Schema do
   query do
     import_fields(:user_queries)
     import_fields(:contact_message_queries)
+    import_fields(:patient_queries)
   end
 
   mutation do
