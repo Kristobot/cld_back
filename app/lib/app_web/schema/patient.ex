@@ -40,7 +40,6 @@ defmodule AppWeb.Schema.Patient do
   input_object :patient_filter do
     field :id, :id
     field :email, :string
-    field :status, :integer
     field :first_name, :string
     field :last_name, :string
     field :status, :integer
