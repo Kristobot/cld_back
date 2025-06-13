@@ -63,6 +63,7 @@ defmodule AppWeb.Schema.User do
 
     field :list_users, list_of(:user) do
       arg :filter, non_null(:user_filter)
+      middleware Middleware.Authenticate
       resolve &App.Resolvers.User.list_users/3
     end
   end
