@@ -41,7 +41,11 @@ defmodule App.Patients do
         query_like = "%#{last_name}%"
         from(q in query, where: like(q.last_name, ^query_like))
       {:gender, gender}, query ->
-        from(q in query, where: q.gender == ^gender)
+        if gender != nil do
+          from(q in query, where: q.gender == ^gender)
+        else
+          query
+        end
       {:email, email}, query ->
         from(q in query, where: q.email == ^email)
       {:status, status}, query ->
