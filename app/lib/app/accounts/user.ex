@@ -10,6 +10,7 @@ defmodule App.Accounts.User do
     field :status, :integer, default: 1
 
     has_one :person, App.Accounts.Person
+    has_one :calendar, App.Scheduling.Calendar
 
     timestamps()
   end

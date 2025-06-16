@@ -7,6 +7,7 @@ defmodule AppWeb.Schema do
   import_types(__MODULE__.Person)
   import_types(__MODULE__.ContactMessage)
   import_types(__MODULE__.Patient)
+  import_types(__MODULE__.Calendar)
 
   query do
     import_fields(:user_queries)
@@ -19,6 +20,7 @@ defmodule AppWeb.Schema do
     import_fields(:person_mutations)
     import_fields(:contact_message_mutations)
     import_fields(:patient_mutations)
+    import_fields(:calendar_mutations)
   end
 
   # Aplica el middleware a todas las mutations
