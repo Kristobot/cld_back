@@ -5,5 +5,6 @@ defmodule App.Scheduling.WeeklyAvailability do
     field :day_of_week, :integer
     field :start_time, :time
     field :end_time, :time
+    field :closed, :integer
   end
 end

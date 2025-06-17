@@ -5,11 +5,13 @@ defmodule AppWeb.Schema.WeeklyAvailability do
     field :day_of_week, :integer
     field :start_time, :time
     field :end_time, :time
+    field :closed, :integer
   end
 
   input_object :weekly_availability_input do
     field :day_of_week, non_null(:integer)
     field :start_time, non_null(:time)
     field :end_time, non_null(:time)
+    field :closed, non_null(:integer)
   end
 end
