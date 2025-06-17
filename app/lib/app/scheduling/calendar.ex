@@ -4,6 +4,7 @@ defmodule App.Scheduling.Calendar do
 
   schema "calendars" do
     field :color, :string, default: "#3b82f6"
+    field :time_zone, :string, default: "America/New_York"
     field :weekly_availabilities, App.Types.Json, struct: App.Scheduling.WeeklyAvailability
     belongs_to :dentist, App.Accounts.User, foreign_key: :dentist_id
 
@@ -12,8 +13,8 @@ defmodule App.Scheduling.Calendar do
 
   def changeset(calendar, attrs) do
     calendar
-    |> cast(attrs, [:color, :weekly_availabilities, :dentist_id])
-    |> validate_required([:color, :weekly_availabilities, :dentist_id])
+    |> cast(attrs, [:color, :weekly_availabilities, :dentist_id, :time_zone])
+    |> validate_required([:color, :weekly_availabilities, :dentist_id, :time_zone])
     |> foreign_key_constraint(:dentist_id)
     |> unique_day_of_week()
   end

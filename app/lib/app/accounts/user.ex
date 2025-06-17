@@ -12,6 +12,8 @@ defmodule App.Accounts.User do
     has_one :person, App.Accounts.Person
     has_one :calendar, App.Scheduling.Calendar
 
+    has_many :appointments, App.Scheduling.Appointment
+
     timestamps()
   end
 

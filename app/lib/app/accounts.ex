@@ -7,10 +7,19 @@ defmodule App.Accounts do
 
   alias App.Accounts.{User, Person}
 
+  @role %{admin: 0, dentist: 1, receptionist: 2, nurse: 3}
+
   def create_user(attrs \\ %{}) do
     %User{}
     |> User.changeset(attrs)
     |> Repo.insert()
+  end
+
+  def is_dentist?(user_id) do
+    case Repo.get(User, user_id) do
+      nil -> {:error, :not_found}
+      user -> user.role == @role.dentist
+    end
   end
 
   def create_user_with_person(attrs \\ %{}) do

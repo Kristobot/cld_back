@@ -5,6 +5,7 @@ defmodule AppWeb.Schema.Calendar do
   object :calendar do
     field :id, :id
     field :color, :string
+    field :time_zone, :string
     field :weekly_availabilities, list_of(:weekly_availability)
     field :dentist, :user
     field :inserted_at, :string
@@ -13,6 +14,7 @@ defmodule AppWeb.Schema.Calendar do
 
   input_object :calendar_input do
     field :color, :string
+    field :time_zone, non_null(:string)
     field :weekly_availabilities, list_of(:weekly_availability_input)
   end
 

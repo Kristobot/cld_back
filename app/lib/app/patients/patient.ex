@@ -17,6 +17,8 @@ defmodule App.Patients.Patient do
     field :emergency_phone, :string
     field :status, :integer, default: 1
 
+    has_many :appointments, App.Scheduling.Appointment
+
     timestamps()
   end
 

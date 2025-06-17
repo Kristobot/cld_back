@@ -5,6 +5,7 @@ defmodule App.Repo.Migrations.CreateCalendar do
     create table(:calendars) do
       add :color, :string
       add :weekly_availabilities, :text
+      add :time_zone, :string
       add :dentist_id, references(:users), null: false
 
       timestamps()
