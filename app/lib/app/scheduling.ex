@@ -10,6 +10,12 @@ defmodule App.Scheduling do
     |> Repo.insert()
   end
 
+  def update_calendar(%Calendar{} = calendar, attrs) do
+    calendar
+    |> Calendar.update_changeset(attrs)
+    |> Repo.update()
+  end
+
   def get_calendar(id) do
     case Repo.get(Calendar, id) do
       nil -> {:error, :not_found}

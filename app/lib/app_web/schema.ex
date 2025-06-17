@@ -8,6 +8,7 @@ defmodule AppWeb.Schema do
   import_types(__MODULE__.ContactMessage)
   import_types(__MODULE__.Patient)
   import_types(__MODULE__.Calendar)
+  import_types(__MODULE__.WeeklyAvailability)
 
   query do
     import_fields(:user_queries)

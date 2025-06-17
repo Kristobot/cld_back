@@ -11,18 +11,6 @@ defmodule AppWeb.Schema.Calendar do
     field :updated_at, :string
   end
 
-  object :weekly_availability do
-    field :day_of_week, :integer
-    field :start_time, :time
-    field :end_time, :time
-  end
-
-  input_object :weekly_availability_input do
-    field :day_of_week, non_null(:integer)
-    field :start_time, non_null(:time)
-    field :end_time, non_null(:time)
-  end
-
   input_object :calendar_input do
     field :color, :string
     field :weekly_availability, list_of(:weekly_availability_input)
@@ -41,6 +29,13 @@ defmodule AppWeb.Schema.Calendar do
       arg :input, non_null(:calendar_input)
       middleware Middleware.Authenticate
       resolve &App.Resolvers.Calendar.create_calendar/3
+    end
+
+    field :update_calendar, :calendar do
+      arg :id, non_null(:id)
+      arg :input, non_null(:calendar_input)
+      middleware Middleware.Authenticate
+      resolve &App.Resolvers.Calendar.update_calendar/3
     end
   end
 end
