@@ -10,15 +10,15 @@ defmodule App.Resolvers.Calendar do
     end
   end
 
-  def get_calendar(_parents, %{id: id}, _resolution) do
-    case Scheduling.get_calendar(id) do
+  def get_calendar(_parents, _args, %{context: %{current_user: user}}) do
+    case Scheduling.get_calendar_by_dentist(user.id) do
       {:ok, calendar} -> {:ok, calendar}
       {:error, changeset} -> {:error, changeset}
     end
   end
 
-  def update_calendar(_parents, %{id: id, input: input}, %{context: %{current_user: user}}) do
-    with {:ok, calendar} <- Scheduling.get_calendar(id),
+  def update_calendar(_parents, %{input: input}, %{context: %{current_user: user}}) do
+    with {:ok, calendar} <- Scheduling.get_calendar_by_dentist(user.id),
       true <- is_my_calendar?(calendar.dentist_id, user.id),
       {:ok, calendar} <- Scheduling.update_calendar(calendar, input)
     do

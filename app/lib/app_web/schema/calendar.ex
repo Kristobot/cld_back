@@ -18,7 +18,6 @@ defmodule AppWeb.Schema.Calendar do
 
   object :calendar_queries do
     field :get_calendar, :calendar do
-      arg :id, non_null(:id)
       middleware Middleware.Authenticate
       resolve &App.Resolvers.Calendar.get_calendar/3
     end
@@ -32,7 +31,6 @@ defmodule AppWeb.Schema.Calendar do
     end
 
     field :update_calendar, :calendar do
-      arg :id, non_null(:id)
       arg :input, non_null(:calendar_input)
       middleware Middleware.Authenticate
       resolve &App.Resolvers.Calendar.update_calendar/3

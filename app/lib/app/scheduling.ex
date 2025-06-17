@@ -22,4 +22,11 @@ defmodule App.Scheduling do
       calendar -> {:ok, calendar}
     end
   end
+
+  def get_calendar_by_dentist(dentist_id) do
+    case Repo.get_by(Calendar, dentist_id: dentist_id) do
+      nil -> {:error, :not_found}
+      calendar -> {:ok, calendar}
+    end
+  end
 end
