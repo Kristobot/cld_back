@@ -13,7 +13,7 @@ defmodule App.Resolvers.Calendar do
   def get_calendar(_parents, _args, %{context: %{current_user: user}}) do
     case Scheduling.get_calendar_by_dentist(user.id) do
       {:ok, calendar} -> {:ok, calendar}
-      {:error, changeset} -> {:error, changeset}
+      {:error, :not_found} -> {:ok, nil}
     end
   end
 
