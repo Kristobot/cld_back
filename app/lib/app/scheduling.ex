@@ -34,6 +34,10 @@ defmodule App.Scheduling do
     %Appointment{}
     |> Appointment.changeset(attrs)
     |> Repo.insert()
+    |> case do
+      {:ok, appointment} -> {:ok, appointment |> Repo.preload([:dentist, :patient, :scheduler])}
+      {:error, changeset} -> {:error, changeset}
+    end
   end
 
   def list_appointments(args) do
